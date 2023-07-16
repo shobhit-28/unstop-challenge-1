@@ -1,6 +1,6 @@
 export const Sidebar = () => {
     return (
-        <div className="h-screen fixed gap-3 pt-4 pr-5 pb-5 pl-[1.875rem] bg-white">
+        <div className="md:hidden h-screen fixed gap-3 pt-4 pr-5 pb-5 pl-[1.875rem] bg-white">
 
             {/* dasboard */}
             <div className="w-[5.625rem] h-[4.375rem] flex items-center justify-center flex-col gap-[0.375rem] rounded-lg cursor-pointer">
