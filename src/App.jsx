@@ -1,8 +1,10 @@
+import { Sidebar } from "./components/sidebar/sidebar"
+
 function App() {
 
   return (
-    <div className="App">
-      <p className="text-5xl">Hello</p>
+    <div className="App bg-[#f6f8fa] h-screen">
+      <Sidebar />
     </div>
   )
 }
