@@ -1,22 +1,9 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useContext } from "react";
+import { StateHandlerContext } from "../../context/stateHandlerContext";
 
 export const Header = () => {
 
-    const getCurrentDimension = () => window.innerWidth
-
-    const [screenWidth, setScreenWidth] = useState(getCurrentDimension());
-
-    useEffect(() => {
-        const updateWidth = () => {
-            setScreenWidth(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateWidth);
-
-        return (() => {
-            window.removeEventListener('resize', updateWidth);
-        })
-    }, [screenWidth])
+    const { screenWidth, setIsSideBarOpen } = useContext(StateHandlerContext)
 
     return (
         <div className="px-5 border-b-2 rounded-b-lg md:px-0">
@@ -25,18 +12,23 @@ export const Header = () => {
 
                 {/* left section */}
                 <div className="flex items-center">
-                    {screenWidth < 900 && <button className="mr-[0.62rem] w-10 h-10 flex justify-center items-center bg-[#F2F8FE] rounded-full">
-                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clipPath="url(#clip0_0_956)">
-                                <path d="M18.75 22.5H3.75V20H18.75V22.5ZM26.25 7.5V10H3.75V7.5H26.25ZM18.75 16.25H3.75V13.75H18.75V16.25Z" fill="#1C4980" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_0_956">
-                                    <rect width="30" height="30" fill="white" transform="matrix(-1 0 0 1 30 0)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </button>}
+                    {screenWidth < 900
+                        &&
+                        <button
+                            className="mr-[0.62rem] w-10 h-10 flex justify-center items-center bg-[#F2F8FE] rounded-full"
+                            onClick={() => setIsSideBarOpen(true)}
+                        >
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0_0_956)">
+                                    <path d="M18.75 22.5H3.75V20H18.75V22.5ZM26.25 7.5V10H3.75V7.5H26.25ZM18.75 16.25H3.75V13.75H18.75V16.25Z" fill="#1C4980" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_0_956">
+                                        <rect width="30" height="30" fill="white" transform="matrix(-1 0 0 1 30 0)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>}
                     <p className="text-[#1C4980] text-xl font-semibold leading-7 md:text-base md:leading-[1.4rem] ">Assessment</p>
                     {screenWidth > 900 && <svg className="mx-[0.625rem]" width="2" height="46" viewBox="0 0 2 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 0V46" stroke="#DADCE0" />
