@@ -12,7 +12,7 @@ export const Header = () => {
 
                 {/* left section */}
                 <div className="flex items-center">
-                    {screenWidth < 900
+                    {screenWidth <= 900
                         &&
                         <button
                             className="mr-[0.62rem] w-10 h-10 flex justify-center items-center bg-[#F2F8FE] rounded-full"
@@ -38,7 +38,7 @@ export const Header = () => {
 
                 {/* right section */}
                 <div className="">
-                    {screenWidth > 900
+                    {screenWidth >= 900
                         ?
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="40" height="40" rx="20" fill="white" />
@@ -69,7 +69,7 @@ export const Header = () => {
             </div>
 
             {/* bottom section */}
-            {screenWidth < 900 &&
+            {screenWidth <= 900 &&
                 <div className="h-12 flex">
                     <p className="cursor-pointer text-[#0073E6] text-sm font-semibold h-12 w-1/2 flex justify-center items-center border-b-[3px] border-[#0073E6]">My Assessments</p>
                     <p className="cursor-pointer text-[#3E6493] text-sm font-semibold h-12 w-1/2 flex justify-center items-center">Unstop Assessments</p>
