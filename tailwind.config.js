@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     screens: {
-      md: { 'max': '900px' },
       lg: { 'max': '1024px' },
+      md: { 'max': '900px' },
       sm: { 'max': '450px' },
     },
     extend: {},
