@@ -8,6 +8,7 @@ export const StateHandler = ({ children }) => {
 
     const [screenWidth, setScreenWidth] = useState(getCurrentDimension());
     const [isSideBarOpen, setIsSideBarOpen] = useState(screenWidth > 900);
+    const [isAddAssessmentFormOpen, setIsAddAssessmentFormOpen] = useState(false)
 
     useEffect(() => {
         const updateWidth = () => {
@@ -26,7 +27,9 @@ export const StateHandler = ({ children }) => {
         <StateHandlerContext.Provider value={{
             isSideBarOpen,
             setIsSideBarOpen,
-            screenWidth
+            screenWidth,
+            isAddAssessmentFormOpen,
+            setIsAddAssessmentFormOpen,
         }}>
             {children}
         </StateHandlerContext.Provider>

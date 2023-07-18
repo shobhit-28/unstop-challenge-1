@@ -1,0 +1,1 @@
+export const skillsData = ['UI/UX and Design', 'No of Question', 'Web Development', 'UI/UX and Design', 'Web Development']

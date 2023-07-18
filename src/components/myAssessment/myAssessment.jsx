@@ -7,7 +7,7 @@ export const MyAssessment = () => {
             <div className="flex gap-[1.875rem] xl:flex-col">
 
                 {/* new assessment */}
-                <div className="flex flex-col gap-3 justify-center grow items-center border border-dashed border-[#DADCE0] rounded-xl bg-[#f6f8fa] cursor-pointer xl:py-[1.875rem]">
+                <button className="flex flex-col gap-3 justify-center grow items-center border border-dashed border-[#DADCE0] rounded-xl bg-[#f6f8fa] xl:py-[1.875rem] outline-none">
 
                     <div className="flex flex-col justify-center items-center gap-[0.625rem]">
                         <div className="h-[4.375rem] w-[4.375rem] p-[0.625rem] flex justify-center items-center rounded-full bg-white">
@@ -28,8 +28,7 @@ export const MyAssessment = () => {
                     <p className="text-center text-xs font-medium">
                         From here you can add questions Of multiple types like <br /> MCQs, subjective (text or paragraph)!
                     </p>
-
-                </div>
+                </button>
 
                 <div className="flex gap-[1.875rem] md:flex-col">
                     <AssessmentCard num={0} />
