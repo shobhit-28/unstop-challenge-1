@@ -1,11 +1,13 @@
+import { AssessmentCard } from "../assessmentCard/assessmentCard"
+
 export const MyAssessment = () => {
     return (
         <div className="mt-6 text-[#1C4980]">
             <p className="text-lg mb-4 font-medium">My Assessment</p>
-            <div className="flex gap-[1.875rem]">
+            <div className="flex gap-[1.875rem] xl:flex-col">
 
                 {/* new assessment */}
-                <div className="p-[1.875rem] flex flex-col gap-3 justify-center items-center border border-dashed border-[#DADCE0] rounded-xl bg-[#f6f8fa] cursor-pointer">
+                <div className="flex flex-col gap-3 justify-center grow items-center border border-dashed border-[#DADCE0] rounded-xl bg-[#f6f8fa] cursor-pointer xl:py-[1.875rem]">
 
                     <div className="flex flex-col justify-center items-center gap-[0.625rem]">
                         <div className="h-[4.375rem] w-[4.375rem] p-[0.625rem] flex justify-center items-center rounded-full bg-white">
@@ -20,7 +22,7 @@ export const MyAssessment = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <p className="text-lg font-medium">New Assessment</p>
+                        <p className="text-lg font-medium lg:text-base">New Assessment</p>
                     </div>
 
                     <p className="text-center text-xs font-medium">
@@ -29,7 +31,10 @@ export const MyAssessment = () => {
 
                 </div>
 
-                
+                <div className="flex gap-[1.875rem] md:flex-col">
+                    <AssessmentCard num={0} />
+                    <AssessmentCard num={324} />
+                </div>
 
             </div>
         </div>
