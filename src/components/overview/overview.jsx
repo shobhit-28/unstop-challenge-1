@@ -3,7 +3,7 @@ import './overview.css'
 export const Overview = () => {
     return (
         <div className='text-[#1C4980]'>
-            <p className="text-lg mb-4">Assessment Overview</p>
+            <p className="text-lg mb-4 font-medium">Assessments Overview</p>
             <div className="rounded-xl border border-[#DADCE0] flex">
 
                 {/* total assessment */}
