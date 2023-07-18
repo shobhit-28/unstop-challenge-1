@@ -9,6 +9,7 @@ export const StateHandler = ({ children }) => {
     const [screenWidth, setScreenWidth] = useState(getCurrentDimension());
     const [isSideBarOpen, setIsSideBarOpen] = useState(screenWidth > 900);
     const [isAddAssessmentFormOpen, setIsAddAssessmentFormOpen] = useState(false)
+    const [isOverViewOpen, setIsOverViewOpen] = useState(screenWidth > 900)
 
     useEffect(() => {
         const updateWidth = () => {
@@ -17,6 +18,7 @@ export const StateHandler = ({ children }) => {
         window.addEventListener('resize', updateWidth);
 
         setIsSideBarOpen(screenWidth > 900)
+        // setIsOverViewOpen(screenWidth > 900)
 
         return (() => {
             window.removeEventListener('resize', updateWidth);
@@ -30,6 +32,8 @@ export const StateHandler = ({ children }) => {
             screenWidth,
             isAddAssessmentFormOpen,
             setIsAddAssessmentFormOpen,
+            isOverViewOpen,
+            setIsOverViewOpen,
         }}>
             {children}
         </StateHandlerContext.Provider>

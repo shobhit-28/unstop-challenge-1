@@ -24,7 +24,7 @@ export const AddAssessmentForm = () => {
     return (
 
         // form-container
-        <div className={classNames("h-screen w-screen fixed z-40 top-0 bg-black/50 text-[#1C4980] flex justify-center items-center duration-700", {
+        <div className={classNames("w-screen fixed z-40 top-0 bg-black/50 text-[#1C4980] flex justify-center items-center duration-700", {
             'h-0': !isAddAssessmentFormOpen,
             'h-screen': isAddAssessmentFormOpen,
         })}
@@ -32,8 +32,8 @@ export const AddAssessmentForm = () => {
 
             {/* form */}
             <div className={classNames("w-[36.9375rem] bg-white rounded-lg border border-[#DADCE0] max-h-screen overflow-auto fixed bottom-0", {
-                '-mb-[200%] duration-[2s]': !isAddAssessmentFormOpen,
-                'mb-[0] duration-[.8s]': isAddAssessmentFormOpen,
+                '-mb-[500%] duration-[2s]': !isAddAssessmentFormOpen,
+                'mb-[0]  duration-[.8s]': isAddAssessmentFormOpen,
             })} ref={formRef}>
 
                 <div className="flex justify-between items-center p-[1.875rem] border-b border-[#DADCE0]">
