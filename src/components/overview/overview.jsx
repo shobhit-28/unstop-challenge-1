@@ -9,7 +9,7 @@ export const Overview = () => {
 
     return (
         <div className={classNames("md:relative duration-1000", {
-            'md:h-[25rem]': isOverViewOpen,
+            'md:h-[25.5rem]': isOverViewOpen,
             'md:h-0': !isOverViewOpen,
         })}>
             <div className={classNames('text-[#1C4980] overflow-hidden duration-700 md:absolute md:w-[100%]', {
@@ -21,7 +21,7 @@ export const Overview = () => {
 
                     {/* total assessment */}
                     <div className="py-4 px-5 w-[10.125rem] border-r div-1 md:border-r-0 sm:p-2">
-                        <p className="text-sm font-semibold mb-4">Total Assessment</p>
+                        <p className="text-sm font-semibold mb-4">Total {screenWidth <= 306 && <br />} Assessment</p>
                         <div className="flex items-center gap-[0.625rem]">
                             <svg className='w-10 h-10 p-[0.625rem] bg-[#EBE8FD] rounded-lg' width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_0_483)">
@@ -79,7 +79,7 @@ export const Overview = () => {
                     {/* source */}
                     <div className="py-4 px-5 border-r grow div-3 md:border-r-0 sm:p-2">
                         <p className="text-sm font-semibold mb-4 sm:mb-2">Candidates Source</p>
-                        <div className="flex items-center gap-5 sm:gap-2 sm:flex-col sm:items-start">
+                        <div className="flex items-center gap-5 md:gap-2 sm:flex-col sm:items-start">
 
                             <div className='flex items-center gap-5 sm:gap-2'>
                                 {/* icon */}
@@ -103,7 +103,7 @@ export const Overview = () => {
                             </div>
 
                             {/* partition */}
-                            {screenWidth >= 450 && <svg width="2" height="40" viewBox="0 0 2 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            {screenWidth > 450 && <svg width="2" height="40" viewBox="0 0 2 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 0V40" stroke="#DADCE0" />
                             </svg>}
 
@@ -111,7 +111,7 @@ export const Overview = () => {
                                 {/* share */}
                                 <div className="">
                                     <div className="flex items-center gap-1">
-                                        <p className="text-xl font-bold">145</p>
+                                        <p className="text-xl font-bold">{screenWidth<= 900 ? `11,000` : `145`}</p>
                                         <p className="text-xs font-medium text-[#05C165]">+89</p>
                                     </div>
                                     <p className="text-xs font-medium">Social Share</p>
@@ -123,7 +123,7 @@ export const Overview = () => {
                                 {/* unique link */}
                                 <div className="">
                                     <div className="flex items-center gap-1">
-                                        <p className="text-xl font-bold">145</p>
+                                        <p className="text-xl font-bold">{screenWidth<= 900 ? `11,000` : `145`}</p>
                                         <p className="text-xs font-medium text-[#05C165]">+89</p>
                                     </div>
                                     <p className="text-xs font-medium">Unique Link</p>
@@ -134,7 +134,7 @@ export const Overview = () => {
 
                     {/* total assessment */}
                     <div className="py-4 pl-5 pr-[3.125rem] w-[11.75rem] div-4 md:border-l sm:p-2">
-                        <p className="text-sm font-semibold mb-4">Total Purpose</p>
+                        <p className="text-sm font-semibold mb-4">Total {screenWidth <= 306 && <br />} Purpose</p>
                         <div className="flex items-center gap-[0.625rem]">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="40" height="40" rx="8" fill="#E5F1FC" />

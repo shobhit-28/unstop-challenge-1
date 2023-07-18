@@ -22,9 +22,9 @@ export const Sidebar = () => {
     return (
         <div className={isSideBarOpen
             ?
-            'duration-[0.75s] md:ml-0 md:fixed md:bg-black/10 md:h-screen md:w-screen'
+            'duration-[0.75s] md:ml-0 md:fixed md:bg-black/10 md:h-screen md:w-screen z-20'
             :
-            'md:-ml-[500%] duration-[2s] md:fixed md:bg-black/10 md:h-screen md:w-screen'
+            'md:-ml-[500%] duration-[2s] md:fixed md:bg-black/10 md:h-screen md:w-screen z-20'
         }>
             <div
                 className="

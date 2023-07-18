@@ -27,17 +27,23 @@ export const AssessmentCard = ({ num }) => {
                                 <path d="M1 0V16" stroke="#DADCE0" />
                             </svg>
                             <p className="flex items-center gap-1">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clipPath="url(#clip0_0_568)">
-                                        <path d="M11.6667 1.75001H11.0834V0.583344H9.91669V1.75001H4.08335V0.583344H2.91669V1.75001H2.33335C1.69169 1.75001 1.16669 2.27501 1.16669 2.91668V12.25C1.16669 12.8917 1.69169 13.4167 2.33335 13.4167H11.6667C12.3084 13.4167 12.8334 12.8917 12.8334 12.25V2.91668C12.8334 2.27501 12.3084 1.75001 11.6667 1.75001ZM11.6667 12.25H2.33335V4.66668H11.6667V12.25Z" fill="#1C4980" />
-                                        <path fillRule="evenodd" clipRule="evenodd" d="M3.50002 7.00001C3.50002 6.67784 3.76119 6.41668 4.08335 6.41668H5.83335C6.15552 6.41668 6.41669 6.67784 6.41669 7.00001C6.41669 7.32218 6.15552 7.58334 5.83335 7.58334H4.08335C3.76119 7.58334 3.50002 7.32218 3.50002 7.00001ZM7.58335 7.00001C7.58335 6.67784 7.84452 6.41668 8.16669 6.41668H9.91669C10.2389 6.41668 10.5 6.67784 10.5 7.00001C10.5 7.32218 10.2389 7.58334 9.91669 7.58334H8.16669C7.84452 7.58334 7.58335 7.32218 7.58335 7.00001ZM3.50002 9.33334C3.50002 9.01118 3.76119 8.75001 4.08335 8.75001H5.83335C6.15552 8.75001 6.41669 9.01118 6.41669 9.33334C6.41669 9.65551 6.15552 9.91668 5.83335 9.91668H4.08335C3.76119 9.91668 3.50002 9.65551 3.50002 9.33334ZM7.58335 9.33334C7.58335 9.01118 7.84452 8.75001 8.16669 8.75001H9.91669C10.2389 8.75001 10.5 9.01118 10.5 9.33334C10.5 9.65551 10.2389 9.91668 9.91669 9.91668H8.16669C7.84452 9.91668 7.58335 9.65551 7.58335 9.33334Z" fill="#1C4980" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_0_568">
-                                            <rect width="14" height="14" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                                {screenWidth <= 900
+                                    ?
+                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.99545 9.12313L8.85996 8.26594L6.60572 6.0117V2.84606H5.39428V6.52034L7.99545 9.12313ZM6 12.5C5.1708 12.5 4.39283 12.3438 3.66609 12.0315C2.93935 11.7192 2.30282 11.2899 1.75648 10.7435C1.21014 10.1972 0.780811 9.5599 0.468486 8.83167C0.156162 8.10344 0 7.32388 0 6.49299C0 5.6621 0.156162 4.88232 0.468486 4.15367C0.780811 3.42501 1.21014 2.79007 1.75648 2.24883C2.30282 1.70759 2.9401 1.28081 3.66833 0.968486C4.39656 0.656162 5.17612 0.5 6.00701 0.5C6.8379 0.5 7.61771 0.657386 8.34643 0.972158C9.07514 1.28693 9.70903 1.71412 10.2481 2.25373C10.7871 2.79333 11.2139 3.42787 11.5283 4.15734C11.8428 4.88681 12 5.6677 12 6.5C12 7.3292 11.8438 8.10717 11.5315 8.83391C11.2192 9.56065 10.7924 10.1972 10.2512 10.7435C9.70993 11.2899 9.07432 11.7192 8.34433 12.0315C7.61434 12.3438 6.8329 12.5 6 12.5ZM6.00727 11.23C7.31584 11.23 8.43011 10.7682 9.35006 9.8446C10.27 8.92099 10.73 7.80369 10.73 6.4927C10.73 5.18171 10.27 4.06684 9.35009 3.1481C8.43016 2.22937 7.3159 1.77 6.00733 1.77C4.69876 1.77 3.58206 2.22937 2.65723 3.1481C1.73241 4.06684 1.27 5.18171 1.27 6.4927C1.27 7.80369 1.7324 8.92099 2.6572 9.8446C3.582 10.7682 4.69869 11.23 6.00727 11.23Z" fill="#8DA4BF" />
+                                    </svg>
+                                    :
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clipPath="url(#clip0_0_568)">
+                                            <path d="M11.6667 1.75001H11.0834V0.583344H9.91669V1.75001H4.08335V0.583344H2.91669V1.75001H2.33335C1.69169 1.75001 1.16669 2.27501 1.16669 2.91668V12.25C1.16669 12.8917 1.69169 13.4167 2.33335 13.4167H11.6667C12.3084 13.4167 12.8334 12.8917 12.8334 12.25V2.91668C12.8334 2.27501 12.3084 1.75001 11.6667 1.75001ZM11.6667 12.25H2.33335V4.66668H11.6667V12.25Z" fill="#1C4980" />
+                                            <path fillRule="evenodd" clipRule="evenodd" d="M3.50002 7.00001C3.50002 6.67784 3.76119 6.41668 4.08335 6.41668H5.83335C6.15552 6.41668 6.41669 6.67784 6.41669 7.00001C6.41669 7.32218 6.15552 7.58334 5.83335 7.58334H4.08335C3.76119 7.58334 3.50002 7.32218 3.50002 7.00001ZM7.58335 7.00001C7.58335 6.67784 7.84452 6.41668 8.16669 6.41668H9.91669C10.2389 6.41668 10.5 6.67784 10.5 7.00001C10.5 7.32218 10.2389 7.58334 9.91669 7.58334H8.16669C7.84452 7.58334 7.58335 7.32218 7.58335 7.00001ZM3.50002 9.33334C3.50002 9.01118 3.76119 8.75001 4.08335 8.75001H5.83335C6.15552 8.75001 6.41669 9.01118 6.41669 9.33334C6.41669 9.65551 6.15552 9.91668 5.83335 9.91668H4.08335C3.76119 9.91668 3.50002 9.65551 3.50002 9.33334ZM7.58335 9.33334C7.58335 9.01118 7.84452 8.75001 8.16669 8.75001H9.91669C10.2389 8.75001 10.5 9.01118 10.5 9.33334C10.5 9.65551 10.2389 9.91668 9.91669 9.91668H8.16669C7.84452 9.91668 7.58335 9.65551 7.58335 9.33334Z" fill="#1C4980" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_0_568">
+                                                <rect width="14" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>}
                                 <span className="text-[#8DA4BF] text-xs font-medium">20 Apr 2023</span>
                             </p>
                         </div>
@@ -57,7 +63,7 @@ export const AssessmentCard = ({ num }) => {
             </div>
 
             {/* partition */}
-            {screenWidth > 450
+            {screenWidth >= 450
                 &&
                 <svg className="my-4 mx-auto" width="356" height="2" viewBox="0 0 356 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 1H356" stroke="#DADCE0" strokeDasharray="3 3" />
@@ -66,7 +72,7 @@ export const AssessmentCard = ({ num }) => {
 
 
             {/* footer section */}
-            <div className="flex justify-between items-center xs:flex-col xs:items-start xs:gap-2">
+            <div className="flex justify-between items-center sm:flex-col sm:items-start sm:gap-2">
 
                 <div className="flex gap-[0.875rem]">
                     <div className="">
@@ -96,42 +102,47 @@ export const AssessmentCard = ({ num }) => {
                         </span>
                     </button>
 
-                    <div className="flex items-center">
-                        {(() => {
-                            switch (num) {
-                                case 0:
-                                    return <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] px-[.375rem] py-[.3125rem] bg-[#6548EE] rounded-full">
-                                        <p className="text-sm font-bold text-white">LP</p>
-                                    </div>
-                                case 324:
-                                    return (
-                                        <>
-                                            <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] px-[.375rem] py-[.3125rem] bg-[#6548EE] rounded-full">
-                                                <p className="text-sm font-bold text-white">LP</p>
-                                            </div>
-                                            <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] -ml-4 px-[.375rem] py-[.3125rem] bg-[#3079E1] rounded-full">
-                                                <p className="text-sm font-bold text-white">LP</p>
-                                            </div>
-                                            <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] -ml-4 px-[.375rem] py-[.3125rem] bg-[#E9407A] rounded-full">
-                                                <p className="text-sm font-bold text-white">LP</p>
-                                            </div>
-                                        </>
-                                    )
-                                case 324090:
-                                    return (
-                                        <>
-                                            <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] px-[.375rem] py-[.3125rem] bg-[#6548EE] rounded-full">
-                                                <p className="text-sm font-bold text-white">LP</p>
-                                            </div>
-                                            <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] -ml-4 px-[.375rem] py-[.3125rem] bg-[#E9407A] rounded-full">
-                                                <p className="text-sm font-bold text-white">LP</p>
-                                            </div>
-                                        </>
-                                    )
-                                default:
-                                    return <p className="declaration"></p>
-                            }
-                        })()}
+                    <div className="flex gap-1 items-center">
+
+                        <div className="flex items-center">
+                            {(() => {
+                                switch (num) {
+                                    case 0:
+                                        return <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] px-[.375rem] py-[.3125rem] bg-[#6548EE] rounded-full">
+                                            <p className="text-sm font-bold text-white">LP</p>
+                                        </div>
+                                    case 324:
+                                        return (
+                                            <>
+                                                <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] px-[.375rem] py-[.3125rem] bg-[#6548EE] rounded-full">
+                                                    <p className="text-sm font-bold text-white">LP</p>
+                                                </div>
+                                                <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] -ml-4 px-[.375rem] py-[.3125rem] bg-[#3079E1] rounded-full">
+                                                    <p className="text-sm font-bold text-white">LP</p>
+                                                </div>
+                                                <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] -ml-4 px-[.375rem] py-[.3125rem] bg-[#E9407A] rounded-full">
+                                                    <p className="text-sm font-bold text-white">LP</p>
+                                                </div>
+                                            </>
+                                        )
+                                    case 324090:
+                                        return (
+                                            <>
+                                                <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] px-[.375rem] py-[.3125rem] bg-[#6548EE] rounded-full">
+                                                    <p className="text-sm font-bold text-white">LP</p>
+                                                </div>
+                                                <div className="flex justify-center items-center h-[1.875rem] w-[1.875rem] -ml-4 px-[.375rem] py-[.3125rem] bg-[#E9407A] rounded-full">
+                                                    <p className="text-sm font-bold text-white">LP</p>
+                                                </div>
+                                            </>
+                                        )
+                                    default:
+                                        return <p className=""></p>
+                                }
+                            })()}
+                        </div>
+
+                        {screenWidth <= 900 && <p className="text-xs font-semibold">+{num === 324090 ? `32,4090` : num}</p>}
                     </div>
 
                 </div>

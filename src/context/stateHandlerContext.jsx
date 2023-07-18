@@ -18,7 +18,7 @@ export const StateHandler = ({ children }) => {
         window.addEventListener('resize', updateWidth);
 
         setIsSideBarOpen(screenWidth > 900)
-        // setIsOverViewOpen(screenWidth > 900)
+        setIsOverViewOpen(screenWidth > 900)
 
         return (() => {
             window.removeEventListener('resize', updateWidth);
