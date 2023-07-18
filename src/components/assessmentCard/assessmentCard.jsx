@@ -1,10 +1,15 @@
+import { useContext } from "react"
+import { StateHandlerContext } from "../../context/stateHandlerContext"
+
 // eslint-disable-next-line react/prop-types
 export const AssessmentCard = ({ num }) => {
+    const { screenWidth } = useContext(StateHandlerContext)
+
     return (
         <div className="p-4 rounded-xl border border-[#DADCE0] lg:scale-90 lg:-m-5 md:scale-100 md:m-0">
 
             {/* top section */}
-            <div className="flex justify-between items-start">
+            <div className="flex justify-between items-start sm:border-b-2 sm:border-dashed sm:pb-4 sm:mb-4">
 
                 {/* right section */}
                 <div className="">
@@ -52,12 +57,16 @@ export const AssessmentCard = ({ num }) => {
             </div>
 
             {/* partition */}
-            <svg className="my-4 mx-auto" width="356" height="2" viewBox="0 0 356 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 1H356" stroke="#DADCE0" strokeDasharray="3 3" />
-            </svg>
+            {screenWidth > 450
+                &&
+                <svg className="my-4 mx-auto" width="356" height="2" viewBox="0 0 356 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 1H356" stroke="#DADCE0" strokeDasharray="3 3" />
+                </svg>
+            }
+
 
             {/* footer section */}
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center xs:flex-col xs:items-start xs:gap-2">
 
                 <div className="flex gap-[0.875rem]">
                     <div className="">

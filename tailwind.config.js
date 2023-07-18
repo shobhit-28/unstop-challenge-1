@@ -10,6 +10,7 @@ export default {
       lg: { 'max': '1024px' },
       md: { 'max': '900px' },
       sm: { 'max': '450px' },
+      xs: { 'max': '340px' },
     },
     extend: {},
   },

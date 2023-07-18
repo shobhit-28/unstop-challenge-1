@@ -70,9 +70,9 @@ export const Header = () => {
 
             {/* bottom section */}
             {screenWidth <= 900 &&
-                <div className="h-12 flex">
-                    <p className="cursor-pointer text-[#0073E6] text-sm font-semibold h-12 w-1/2 flex justify-center items-center border-b-[3px] border-[#0073E6]">My Assessments</p>
-                    <p className="cursor-pointer text-[#3E6493] text-sm font-semibold h-12 w-1/2 flex justify-center items-center">Unstop Assessments</p>
+                <div className="h-12 flex text-sm font-semibold xs:text-xs">
+                    <p className="cursor-pointer text-[#0073E6] h-12 w-1/2 flex justify-center items-center border-b-[3px] border-[#0073E6]">My Assessments</p>
+                    <p className="cursor-pointer text-[#3E6493] h-12 w-1/2 flex justify-center items-center">Unstop Assessments</p>
                 </div>
             }
         </div>
