@@ -1,13 +1,19 @@
+import { useContext } from "react"
+
+import { StateHandlerContext } from "../../context/stateHandlerContext"
+
 import { AssessmentCard } from "../assessmentCard/assessmentCard"
 
 export const MyAssessment = () => {
+    const { setIsAddAssessmentFormOpen } = useContext(StateHandlerContext)
+
     return (
         <div className="mt-6 text-[#1C4980]">
             <p className="text-lg mb-4 font-medium">My Assessment</p>
             <div className="flex gap-[1.875rem] xl:flex-col">
 
                 {/* new assessment */}
-                <button className="flex flex-col gap-3 justify-center grow items-center border border-dashed border-[#DADCE0] rounded-xl bg-[#f6f8fa] xl:py-[1.875rem] outline-none">
+                <button onClick={() => setIsAddAssessmentFormOpen(true)} className="flex flex-col gap-3 justify-center grow items-center border border-dashed border-[#DADCE0] rounded-xl bg-[#f6f8fa] xl:py-[1.875rem] outline-none">
 
                     <div className="flex flex-col justify-center items-center gap-[0.625rem]">
                         <div className="h-[4.375rem] w-[4.375rem] p-[0.625rem] flex justify-center items-center rounded-full bg-white">

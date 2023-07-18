@@ -25,20 +25,20 @@ export const AddAssessmentForm = () => {
 
         // form-container
         <div className={classNames("h-screen w-screen fixed z-40 top-0 bg-black/50 text-[#1C4980] flex justify-center items-center duration-700", {
-            'h-0' : !isAddAssessmentFormOpen,
-            'h-screen' : isAddAssessmentFormOpen,
+            'h-0': !isAddAssessmentFormOpen,
+            'h-screen': isAddAssessmentFormOpen,
         })}
         >
 
             {/* form */}
-            <div className={classNames("w-[36.9375rem] bg-white rounded-lg border border-[#DADCE0] max-h-screen overflow-auto fixed bottom-0 duration-700", {
-                '-mb-[200%]' : !isAddAssessmentFormOpen,
-                'mb-[0] ' : isAddAssessmentFormOpen,
+            <div className={classNames("w-[36.9375rem] bg-white rounded-lg border border-[#DADCE0] max-h-screen overflow-auto fixed bottom-0", {
+                '-mb-[200%] duration-[2s]': !isAddAssessmentFormOpen,
+                'mb-[0] duration-[.8s]': isAddAssessmentFormOpen,
             })} ref={formRef}>
 
                 <div className="flex justify-between items-center p-[1.875rem] border-b border-[#DADCE0]">
                     <p className="text-xl font-semibold">Create new Assessment</p>
-                    <button>
+                    <button onClick={() => setIsAddAssessmentFormOpen(false)}>
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.3033 22.071L15 16.7677L9.6967 22.071L7.92893 20.3033L13.2322 15L7.92893 9.69668L9.6967 7.92891L15 13.2322L20.3033 7.92891L22.0711 9.69668L16.7678 15L22.0711 20.3033L20.3033 22.071Z" fill="#323232" />
                         </svg>
@@ -114,14 +114,17 @@ export const AddAssessmentForm = () => {
                         </div>
                     </div>
 
-                    <div className="w-full flex flex-col gap-[.625rem]">
+                    <div className="w-full flex flex-col gap-[.625rem] mb-20">
                         <p className="text-base font-medium">Duration of Assessment</p>
                         <input disabled type="text" name="" id="" className="p-[0.9375rem] border border-[#DADCE0] rounded-lg w-full bg-white text-sm font-medium text-[#8DA4BF]" value={'HH:MM:SS'} />
                     </div>
 
                 </div>
 
-                <div className="py-5 px-[1.875rem] shadow-[0_-4px_50px_0px_rgba(0,0,0,0.09)]">
+                <div className={classNames("py-5 px-[1.875rem] shadow-[0_-4px_50px_0px_rgba(0,0,0,0.09)] fixed bottom-0 bg-white w-[36.9375rem]", {
+                    '-mb-[200%] duration-[2s]': !isAddAssessmentFormOpen,
+                    'mb-[0] duration-[.8s]': isAddAssessmentFormOpen,
+                })}>
                     <button className="w-full py-[.625rem] px-[1.875rem] bg-[#0073E6] text-white text-sm font-semibold rounded-lg outline-none">Save</button>
                 </div>
 
